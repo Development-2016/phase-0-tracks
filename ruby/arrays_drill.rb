@@ -1,3 +1,28 @@
+# Release 2.2
+
+# write method that takes an array and an item as parameters
+# and returns an array of those items.
+def add_to_array(array1, str)
+	array1 << str
+end
+
+# should return => ["a"]
+p add_to_array([], "a")
+# test the method
+p add_to_array(["a", "b", "c", 1, 2], 3)
+p add_to_array(["h", "o", "k", 5, 2], 9)
+
+puts "_____________________"
+# Release 2.1
+def build_array(item1,item2,item3)
+	array = []
+	array << item1 << item2 << item3
+end
+
+# defining method should return [1, "two", nil]
+p build_array(1, "two", nil)
+
+
 # initialize empty array
 grocery_list = []
 
@@ -24,3 +49,4 @@ another_list = ["cars", 33, true, "red"]
 my_array =grocery_list.concat(another_list)
 
 p my_array
+
