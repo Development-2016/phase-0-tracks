@@ -7,3 +7,4 @@ def printer
 end
 
 printer { |name1, name2| puts "Can you read this, #{name1} and #{name2}?" }
+
