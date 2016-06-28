@@ -1,8 +1,8 @@
 # Create a new class named Puppy
 class Puppy
 	# add characteristics
-	type
-	age
-	shed
+	type_of_dog:
+	age:
+	shed:
 end
 
