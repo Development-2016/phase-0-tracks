@@ -2,6 +2,11 @@
 
 class Santa
 
+	# Refactor code to simplify "getter and setter"
+	# added reader and reader/writable (accessor)
+	attr_reader :age, :ethnicity
+	attr_accessor :gender 
+
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
 		@gender = gender
@@ -21,17 +26,17 @@ class Santa
 		reindeer_ranking
 	end
 
-	def gender=(new_gender)
-		@gender = new_gender
-	end
+	#def gender=(new_gender)
+	#	@gender = new_gender
+	#end
 
-	def age
-		@age
-	end
+	#def age
+	#	@age
+	#end
 
-	def ethnicity
-		@ethnicity
-	end
+	#def ethnicity
+	#	@ethnicity
+	#end
 
 	def speak
 		puts "Ho, ho, ho! Happy holidays!"
