@@ -13,7 +13,7 @@ class Santa
 		@ethnicity = ethnicity
 		reindeer_ranking = ["Rudolp", "Dasher", "Prancer", "Vixen", 
 			"Comet", "Cupid", "Donner", "Blitzen"]
-		@age = 0
+		@age = rand(140)
 	end
 
 	def celebrate_birthday
@@ -47,7 +47,7 @@ class Santa
 	end
 
 end
-
+=begin
 big_santa = Santa.new("male", "hispanic")
 big_santa.speak
 big_santa.eat_milk_and_cookies("oatmeal")
@@ -64,13 +64,37 @@ santas << Santa.new("N/A", "N/A")
 
 # The code above is repetative, we can also write it like this:
 
-santa = []
+santas = []
 example_genders = ["agender", "female", "bigender", "male",
 "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "japanese", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 example_genders.length.times do |i|
 	santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
+
+
+# to randomly assignt ethnicities and geners use a rand_num  
+example_genders = ["agender", "female", "bigender", "male",
+"female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "japanese", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_genders.length.times do |i|
+	random_num = rand(example_genders.length)
+	santas << Santa.new(example_genders[random_num], example_ethnicities[random_num])
+end
+
+=end 
+# create a program that creates many santas
+# randomly select genders and ethnicities to each one
+
+example_genders = ["agender", "female", "bigender", "male",
+"female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "japanese", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+100.times do |x|
+	random_num = rand(example_genders.length)
+	p santas = Santa.new(example_genders[random_num], example_ethnicities[random_num])
+end
+
 
 
 
