@@ -1,6 +1,12 @@
 # Modules
 # Release 1
 
+# Modules are set of methods that don't have attributes and don't need mutliplce copies
+# They are just solitary set of behavior, they prevent clutter
+# You don't call ".new " to a Module
+
+# Modules can be used as MIXINS, they can be "mixed in" to classes to gie classes more functionality.
+
 #module Shout
 #	def self.yell_angrily(words)
 #		words + "!!!" + " :("
@@ -14,7 +20,10 @@
 # puts Shout.yell_angrily("Shit")
 # puts Shout.yelling_happily("Awesome")
 
-# Release 2
+# Release 2 - Mix in a Module
+# Sometimes classes don't have much in common, but they share behavior.
+# We can use a module to add the same behavior to both classes.
+# For instance: birds and airplanes can both fly
 
 module Flight
 	def take_off(altitude)
