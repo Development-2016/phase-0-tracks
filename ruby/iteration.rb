@@ -8,6 +8,9 @@ end
 
 printer { |name1, name2| puts "Can you read this, #{name1} and #{name2}?" }
 
+# => I hope this prints...
+# => Can you read this, John and Thomas?
+
 def test
 	puts "This is not a test"
 	yield
