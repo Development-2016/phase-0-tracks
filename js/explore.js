@@ -17,6 +17,12 @@ function reverse(str){
 	console.log(reversed_word);
 }
 
-reverse("hello")
+reverse("hello");
 reverse("monster")
 reverse("world")
+// test the variable
+//console.log(reversed_word);
+
+if (1 == 1){
+	console.log(reversed_word);
+}
