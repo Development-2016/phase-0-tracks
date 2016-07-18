@@ -14,3 +14,24 @@ function longest_item(){
 }
 
 console.log(longest_item)
+
+console.log("------------------")
+
+// write function that takes two objects and checks if objects share at least
+// one key-value pair.
+var obj1 = {name: "Steven", age: 54};
+var obj2 = {name: "Tamir", age: 54};
+
+var x;
+
+function checker(item1, item2){
+	for (x in item1) {
+	if (item1[x] == item2[x]){
+		return true;
+		}
+	}
+}
+
+console.log(checker(obj1, obj2))
+
+
