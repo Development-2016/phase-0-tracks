@@ -34,4 +34,53 @@ function checker(item1, item2){
 
 console.log(checker(obj1, obj2))
 
+// write function that takes an integer for length
+// it builds and return an array of strings with given length
+// the words should be random, randomly varying in length
+// with a minumum of 1 letter and maximum of 10 letters
+var abc = "abcdefghijklmnopqrstuvwxyz"
+var array = [];
+var final_array = [];
+
+function rand_array(num){
+	for (i = 0; i < num; i++){
+		array.push(null)
+	}
+
+	for (i = 0; i < Math.floor(Math.random()*11);i++) {
+	var rand_letter = abc.charAt(Math.floor((Math.random()*26)));
+	var new_array = [];
+	new_array.push(rand_letter);
+	new_array.join('');
+	new_array.toString();
+	console.log(new_array)
+	}
+}	
+rand_array(10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
