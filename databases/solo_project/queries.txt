@@ -1,0 +1,39 @@
+RELEASE 2: Execute SQL Queries
+
+1. Display the information in one table (either table is fine).
+
+sqlite> SELECT * FROM houses;
+1|555 Nowhere|100000|1
+2|154 Whocares st.|250000|2
+3|981 W Road|5000000|3
+
+2.Update an item that meets some condition (you can choose a condition that makes sense)
+
+3. Display the information in both tables using one query.
+
+sqlite> SELECT price FROM houses WHERE price > 100000;
+250000
+5000000
+
+4.Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT houses.location, classification.type_of_house FROM houses JOIN classification ON houses.class_id = classification.id;
+555 Nowhere|traditional
+154 Whocares st.|modern
+981 W Road|luxury
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> DELETE FROM houses WHERE price < 150000;
+sqlite> SELECT * FROM houses;
+2|154 Whocares st.|250000|2
+3|981 W Road|5000000|3
+
+sqlite> SELECT classification.type_of_house, houses.location FROM houses INNER JOIN classification ON houses.id=classification.id;
+modern|154 Whocares st.
+luxury|981 W Road
+
+sqlite> SELECT houses.id,houses.location, houses.price, classification.type_of_house FROM houses LEFT JOIN classification ON houses.class_id=classification.id;
+2|154 Whocares st.|250000|modern
+3|981 W Road|5000000|luxury
+sqlite>
