@@ -1,0 +1,22 @@
+8.4 Many-to-Many Relationship
+
+sqlite> SELECT * FROM users LEFT JOIN reviews ON users.id = reviews.user_id LEFT JOIN businesses ON businesses.id = reviews.business_id;
+1|Bradford|Pitt|1|4|great food|6|1|6|Sushi World
+2|Mandy|Kaling|2|2|okay equipment|7|2|7|JoeBob's Sportz Barn
+3|Angela|Jolie|4|1|bad workout|3|3|3|The Beagle Nightclub
+4|Steven|Wonder|||||||
+5|Holly|Berry|||||||
+6|Merryl|Streepman|5|3|decent tow|2|6|2|Amir's Towing
+7|Denzel|George|3|5|excellent job|5|7|5|Plumbing by Janet
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users LEFT JOIN reviews ON users.id = reviews.user_id LEFT JOIN businesses ON businesses.id = reviews.business_id;
+Bradford|Pitt|Sushi World|4|great food
+Mandy|Kaling|JoeBob's Sportz Barn|2|okay equipment
+Angela|Jolie|The Beagle Nightclub|1|bad workout
+Steven|Wonder|||
+Holly|Berry|||
+Merryl|Streepman|Amir's Towing|3|decent tow
+Denzel|George|Plumbing by Janet|5|excellent job
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users LEFT JOIN reviews ON users.id = reviews.user_id LEFT JOIN businesses ON businesses.id = reviews.business_id WHERE businesses.name = "Sushi World";
+Bradford|Pitt|Sushi World|4|great food
